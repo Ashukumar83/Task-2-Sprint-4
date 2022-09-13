@@ -9,42 +9,42 @@ on:
   workflow_dispatch:
 
 jobs:
-  # job_1:
-  #   runs-on: self-hosted
-
-  #   steps:
-  #     - uses: actions/checkout@v3
-  #     - name: Run a one-line script
-  #       run: echo Hello, world!
-
-  job_2:
-    runs-on: self-hosted
+  job_1:
+    runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-python@v3
+      - name: Run a one-line script
+        run: echo Hello, world!
+
+  job_2:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
         with:
-          python-version: '3.7'
+          python-version: '3.10'
       - name: My python 
         run: python my_script.py
 
-  # job_3:
-  #   runs-on: ubuntu-latest
+  job_3:
+    runs-on: ubuntu-latest
 
-  #   steps:
-  #     - uses: actions/checkout@v3
-  #     - uses: actions/setup-python@v4
-  #       with:
-  #         python-version: '3.10'
-  #     - name: My python 
-  #       run: python yes/**
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - name: My python 
+        run: python yes/**
   #       # run: | 
   #       #     cd yes    
   #       #   python a/**
   
-  # job_4:
-  #   runs-on: self-hosted
-  #   steps:
-  #     - uses: actions/checkout@v3
-  #     - name: Run a one-line script
-  #       run: echo Hello, world!
+  job_4:
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run a one-line script
+        run: echo I am self-hosted runner.
