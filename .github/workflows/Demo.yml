@@ -9,37 +9,38 @@ on:
   workflow_dispatch:
 
 jobs:
-  job_1:
-    runs-on: ubuntu-latest
+  # job_1:
+  #   runs-on: ubuntu-latest
 
-    steps:
-      - uses: actions/checkout@v3
-      - name: Run a one-line script
-        run: echo Hello, world!
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #     - name: Run a one-line script
+  #       run: echo Hello, world!
 
-  job_2:
-    runs-on: ubuntu-latest
+  # job_2:
+  #   runs-on: ubuntu-latest
 
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-python@v4
-        with:
-          python-version: '3.10'
-      - name: My python 
-        run: python my_script.py
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #     - uses: actions/setup-python@v4
+  #       with:
+  #         python-version: '3.10'
+  #     - name: My python 
+  #       run: python my_script.py
 
-  job_3:
-    runs-on: ubuntu-latest
+  # job_3:
+  #   runs-on: ubuntu-latest
 
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-python@v4
-        with:
-          python-version: '3.10'
-      - name: My python 
-        run: | 
-            cd yes    
-          python a/**
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #     - uses: actions/setup-python@v4
+  #       with:
+  #         python-version: '3.10'
+  #     - name: My python 
+  #       run: python yes/**
+  #       # run: | 
+  #       #     cd yes    
+  #       #   python a/**
   
   job_4:
     runs-on: self-hosted
