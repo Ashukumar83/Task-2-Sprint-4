@@ -41,9 +41,9 @@ jobs:
             cd yes    
           python a/**
   
-  job_4:
-    runs-on: self-hosted
-    steps:
-      - uses: actions/checkout@v3
-      - name: Run a one-line script
-        run: echo I am self-hosted runner.
+  # job_4:
+  #   runs-on: self-hosted
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #     - name: Run a one-line script
+  #       run: echo I am self-hosted runner.
