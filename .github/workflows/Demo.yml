@@ -37,4 +37,13 @@ jobs:
         with:
           python-version: '3.10'
       - name: My python 
-        run: python yes/**
+        run: | 
+            cd yes    
+          python a/**
+  
+  job_4:
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run a one-line script
+        run: echo I am self-hosted runner.
