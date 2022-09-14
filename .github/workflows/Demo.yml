@@ -47,4 +47,4 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Run a one-line script
-        run: echo I am self-hosted runner.
+        run: echo I #am self-hosted runner.
