@@ -1,8 +1,8 @@
 name: Workflow
 on:
 
-env: 
-  var: "Hello"
+  # env: 
+  #   var: "Hello"
   
   push:
     branches: [ "main" ]
@@ -18,7 +18,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Run a one-line script
-        run: echo $var # Hello, world!
+        run: echo Hello, world!
   job_3:
     runs-on: ubuntu-latest
 
@@ -29,7 +29,6 @@ jobs:
           python-version: '3.10'
       - name: My py
         run: python yes/**
-        #run: echo $var
 
   # job_2:
   #   runs-on: ubuntu-latest
