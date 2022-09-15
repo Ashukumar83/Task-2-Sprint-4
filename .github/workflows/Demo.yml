@@ -1,15 +1,16 @@
 name: Workflow
 on:
 
-  # env: 
-  #   var: "Hello"
-  
   push:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
 
   workflow_dispatch:
+
+env: 
+  var: "Hello"
+  
 
 jobs:
   job_1:
