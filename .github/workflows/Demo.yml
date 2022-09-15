@@ -1,8 +1,8 @@
 name: Workflow
 on:
 
-  env: 
-    var: "Hello"
+env: 
+  var: "Hello"
   
   push:
     branches: [ "main" ]
